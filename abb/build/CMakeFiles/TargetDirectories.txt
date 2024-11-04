@@ -1,0 +1,3 @@
+/home/edauandes/Tarea3_eda/abb/build/CMakeFiles/test_abb.dir
+/home/edauandes/Tarea3_eda/abb/build/CMakeFiles/edit_cache.dir
+/home/edauandes/Tarea3_eda/abb/build/CMakeFiles/rebuild_cache.dir

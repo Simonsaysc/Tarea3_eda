@@ -1,0 +1,3 @@
+/home/edauandes/Tarea3_eda/avl/build/CMakeFiles/test_avl.dir
+/home/edauandes/Tarea3_eda/avl/build/CMakeFiles/edit_cache.dir
+/home/edauandes/Tarea3_eda/avl/build/CMakeFiles/rebuild_cache.dir

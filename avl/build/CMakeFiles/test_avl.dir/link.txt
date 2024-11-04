@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/test_avl.dir/tests/test.cpp.o CMakeFiles/test_avl.dir/src/avlNode.cpp.o CMakeFiles/test_avl.dir/src/avl.cpp.o -o test_avl 

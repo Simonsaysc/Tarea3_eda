@@ -27,7 +27,7 @@ int* readKeysFromFile(std::string filename, int* n_keys){
 
 int main(int nargs, char** vargs){
     int n_data = 0;
-    int* data = readKeysFromFile("keys_sorted.bin", &n_data);
+    int* data = readKeysFromFile("/home/edauandes/Tarea3_eda/data_trees/keys_1024.bin", &n_data);
     trees::RB rbtree;
     for(int i=0; i<n_data;i++){
         std::cout<< "inserting " << data[i] << std::endl;

@@ -24,12 +24,12 @@ void RB::balance(RBNode* node){
 	else if (rType == RotationType::case_2){
 		do_case_2(node);
 	}
-	else if (rType == RotationType::case_3){
+	/*else if (rType == RotationType::case_3){
 		do_case_3(node);
 	}
 	else if (rType == RotationType::case_4){
 		do_case_4(node);
-	}
+	}*/
 }
 
 RotationType RB::getRotationType(RBNode* node){
@@ -119,15 +119,9 @@ void RB::insert(int val, RBNode* node){
 		}
 	}
 	
-	if(new_node!=nullptr){
-		if(new_node->getParent()->isRed()){
-
-		};
 	}
 
 
-
-}
 
 void RB::insert(int val){
 	if (root == nullptr){
@@ -181,4 +175,4 @@ RB::~RB() {
 	delete root;
 }
 
-} /* namespace trees */
+ }/* namespace trees */

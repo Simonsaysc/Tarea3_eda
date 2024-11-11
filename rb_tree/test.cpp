@@ -65,14 +65,6 @@ int main(int nargs, char** vargs){
     trees::RB rbtree;
     //cargar queries
     std::vector<int> queries = readQueriesFromFile(data_folder + "queries_1000.bin");
-        rbtree.insert(6);
-        rbtree.insert(7);
-        rbtree.insert(2);
-        rbtree.insert(10);
-        rbtree.insert(8);
-        rbtree.insert(26);
-        rbtree.insert(18);
-        rbtree.traverse();
     //procesar cada archivo en la lista
     for (const std::string& filename : files) {
         std::cout << "Procesando archivo: " << filename << std::endl;
@@ -83,7 +75,7 @@ int main(int nargs, char** vargs){
             std::cerr << "Error al leer los datos del archivo: " << filename << std::endl;
             continue;  //pasar al siguiente archivo si hubo un error
         }
-        /*
+        
         trees::RB rbtree;
 
         //medir el tiempo de inserción en el árbol Red-Black
@@ -94,10 +86,10 @@ int main(int nargs, char** vargs){
         auto end_insertion = std::chrono::high_resolution_clock::now();
         auto duration_insertion = std::chrono::duration_cast<std::chrono::microseconds>(end_insertion - start_insertion).count();
         std::cout << "Tiempo de inserción para " << filename << ": " << duration_insertion << " microsegundos" << std::endl;
-        */
+        
         //medir el tiempo de búsqueda de las queries
  
-        /*
+        
         int found_count = 0;
         int not_found_count = 0;
         auto start_search = std::chrono::high_resolution_clock::now();
@@ -114,7 +106,7 @@ int main(int nargs, char** vargs){
         //resultados de búsqueda
         std::cout << "Tiempo de búsqueda para " << filename << ": " << duration_search << " microsegundos" << std::endl;
         std::cout << "Resultados de búsqueda - Encontrados: " << found_count << ", No encontrados: " << not_found_count << std::endl;
-        */
+        
         delete[] data;  //liberar memoria
     }
 

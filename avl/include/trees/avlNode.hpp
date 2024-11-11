@@ -1,12 +1,12 @@
 /*
- * abbNode.h
+ * avlNode.h
  *
  *  Created on: Sep 2, 2022
  *      Author: jsaavedr
  */
 
-#ifndef ABBNODE_HPP_
-#define ABBNODE_HPP_
+#ifndef AVLNODE_HPP_
+#define AVLNODE_HPP_
 
 namespace trees {
 
@@ -54,4 +54,4 @@ public:
 
 } /* namespace trees */
 
-#endif /* ABBNODE_H_ */
+#endif /* AVLNODE_H_ */

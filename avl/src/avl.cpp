@@ -1,5 +1,5 @@
 /*
- * abb.cpp
+ * avl.cpp
  *
  *  Created on: Sep 2, 2022
  *      Author: jsaavedr
@@ -17,7 +17,7 @@ AVL::AVL():root(nullptr) {
 
 void AVL::balance(AVLNode* node){
 	RotationType rType = getRotationType(node);
-	std::cout << "Rotation Type : "  << rType << std::endl;
+	//std::cout << "Rotation Type : "  << rType << std::endl;
 	if (rType == RotationType::LeftRotation){
 		leftRotation(node);
 	}
@@ -62,7 +62,7 @@ RotationType AVL::getRotationType(AVLNode* node){
 }
 
 void AVL::leftRotation(AVLNode* node){
-	std::cout<<"****left-rotation "<<node->getData()<<std::endl;
+	//std::cout<<"****left-rotation "<<node->getData()<<std::endl;
 	AVLNode* rightChild = node->getRight();
 	AVLNode* parent = node->getParent();
 	bool isLeft = node->isLeft();
@@ -85,14 +85,14 @@ void AVL::leftRotation(AVLNode* node){
 }
 
 void AVL::leftRightRotation(AVLNode* node){
-	std::cout<<"left-right rotation"<<std::endl;
+	//std::cout<<"left-right rotation"<<std::endl;
 	leftRotation(node->getLeft());
 	rightRotation(node);
 }
 
 void AVL::rightRotation(AVLNode* node){
 
-	std::cout<<"***right rotation "<<node->getData()<<std::endl;
+	//std::cout<<"***right rotation "<<node->getData()<<std::endl;
 	AVLNode* leftChild = node->getLeft();
 	AVLNode* parent = node->getParent();
 	bool isLeft = node->isLeft();
@@ -116,7 +116,7 @@ void AVL::rightRotation(AVLNode* node){
 }
 
 void AVL::rightLeftRotation(AVLNode* node){
-	std::cout<<"right-left rotation"<<std::endl;
+	//std::cout<<"right-left rotation"<<std::endl;
 	rightRotation(node->getRight());
 	leftRotation(node);
 }
@@ -174,16 +174,25 @@ AVLNode* AVL::find_rec(int val, AVLNode* node){
 	return ans;
 }
 
-AVLNode* AVL::find(int val){
-	AVLNode* ans = nullptr;
-	ans = find_rec(val, root);
-	return ans;
+AVLNode* AVL::find(int key) {
+    AVLNode* current = root;
+    while (current != nullptr) {
+        //std::cout << "Visitando nodo con valor: " << current->getData() << std::endl;
+        if (key == current->getData()) {
+            return current;
+        } else if (key < current->getData()) {
+            current = current->getLeft();
+        } else {
+            current = current->getRight();
+        }
+    }
+    return nullptr;
 }
 
 void AVL::traverse_rec(AVLNode* node, int label){
 	if (node != nullptr){
 		for (int i = 0; i < label; i++){
-			std::cout << "*" << std::flush;
+			//std::cout << "*" << std::flush;
 		}
 		char T = node->isLeft()?'L':'R';
 		std::cout << node->getData() << "  " << T <<std::endl;

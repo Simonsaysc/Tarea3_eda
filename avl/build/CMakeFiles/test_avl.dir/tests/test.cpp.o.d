@@ -1,7 +1,8 @@
 CMakeFiles/test_avl.dir/tests/test.cpp.o: \
- /home/edauandes/Tarea3_eda/avl/tests/test.cpp /usr/include/stdc-predef.h \
- /home/edauandes/Tarea3_eda/avl/include/trees/avl.hpp \
- /home/edauandes/Tarea3_eda/avl/include/trees/avlNode.hpp \
+ /home/edauandes/t3EDA/Tarea3_eda/avl/tests/test.cpp \
+ /usr/include/stdc-predef.h \
+ /home/edauandes/t3EDA/Tarea3_eda/avl/include/trees/avl.hpp \
+ /home/edauandes/t3EDA/Tarea3_eda/avl/include/trees/avlNode.hpp \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -145,4 +146,14 @@ CMakeFiles/test_avl.dir/tests/test.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/fstream \
+ /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h

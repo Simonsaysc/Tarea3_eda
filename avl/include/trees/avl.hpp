@@ -1,12 +1,12 @@
 /*
- * abb.hpp
+ * avl.hpp
  *
  *  Created on: Sep 2, 2022
  *      Author: jsaavedr
  */
 
-#ifndef ABB_HPP_
-#define ABB_HPP_
+#ifndef AVL_HPP_
+#define AVL_HPP_
 
 #include "trees/avlNode.hpp"
 
@@ -42,4 +42,4 @@ public:
 
 } /* namespace trees */
 
-#endif /* ABB_HPP_ */
+#endif /* AVL_HPP_ */

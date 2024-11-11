@@ -90,12 +90,7 @@ char RBNode::getType(){
 
 
 RBNode::~RBNode() {
-	if (ptrLeft != nullptr){
-		delete ptrLeft;
-	}
-	if (ptrRight != nullptr){
-		delete ptrRight;
-	}
+	
 }
 
 } /* namespace trees */

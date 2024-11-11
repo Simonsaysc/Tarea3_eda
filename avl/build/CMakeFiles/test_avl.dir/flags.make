@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/edauandes/Tarea3_eda/avl/include
+CXX_INCLUDES = -I/home/edauandes/t3EDA/Tarea3_eda/avl/include
 
 CXX_FLAGS = -std=gnu++11
 

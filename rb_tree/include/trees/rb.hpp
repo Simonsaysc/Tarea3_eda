@@ -1,5 +1,5 @@
 /*
- * abb.hpp
+ * rb.hpp
  *
  *  Created on: Sep 2, 2022
  *      Author: jsaavedr
@@ -27,7 +27,10 @@ private:
 	void balance(RBNode* node);
 	void do_case_1(RBNode* node);
 	void do_case_2(RBNode* node);
+	void do_case_3(RBNode* node);
 	//....
+	void rotateLeft(RBNode* node);
+    void rotateRight(RBNode* node);
 	RotationType getRotationType(RBNode* node);
 public:
 	RB();
@@ -37,6 +40,7 @@ public:
 	RBNode* find(int val);
 	void traverse(RBNode* node, int level);
 	void traverse();
+	void clear(RBNode* node);
 	virtual ~RB();
 };
 

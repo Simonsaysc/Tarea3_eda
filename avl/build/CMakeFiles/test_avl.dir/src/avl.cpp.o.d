@@ -1,7 +1,8 @@
 CMakeFiles/test_avl.dir/src/avl.cpp.o: \
- /home/edauandes/Tarea3_eda/avl/src/avl.cpp /usr/include/stdc-predef.h \
- /home/edauandes/Tarea3_eda/avl/include/trees/avl.hpp \
- /home/edauandes/Tarea3_eda/avl/include/trees/avlNode.hpp \
+ /home/edauandes/t3EDA/Tarea3_eda/avl/src/avl.cpp \
+ /usr/include/stdc-predef.h \
+ /home/edauandes/t3EDA/Tarea3_eda/avl/include/trees/avl.hpp \
+ /home/edauandes/t3EDA/Tarea3_eda/avl/include/trees/avlNode.hpp \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

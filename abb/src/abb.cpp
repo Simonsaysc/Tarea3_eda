@@ -15,25 +15,19 @@ ABB::ABB():root(nullptr) {
 }
 
 void ABB::insert_rec(int val, ABBNode* node){
-	if (val < node->getData()){
-		//LEFT
-		if (node->getLeft() == nullptr){
-			node->setLeft(new ABBNode(val));
-			//std::cout<<val << " inserted on left" << std::endl;
+	while(node->getLeft()!= nullptr || node->getRight()!= nullptr){
+		if(val < node -> getData()){
+			node = node->getLeft();
 		}
 		else{
-			insert_rec(val, node->getLeft());
+			node = node -> getRight();
 		}
 	}
-	else{
-		//RIGHT
-		if (node->getRight() == nullptr){
-			node->setRight(new ABBNode(val));
-			//std::cout<<val << " inserted on right" << std::endl;
-		}
-		else{
-			insert_rec(val, node->getRight());
-		}
+	if(val < node -> getData() && node->getLeft() == nullptr){
+		node->setLeft(new ABBNode(val));
+	}
+	else if(val >= node -> getData() && node->getRight() == nullptr){
+		node->setRight(new ABBNode(val));
 	}
 }
 

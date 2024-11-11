@@ -70,16 +70,16 @@ void RB::insert(int val) {
         parent->setRight(newNode);
     }
 
-    balance(parent);  //llama a balance después de la inserción
+    balance(parent, grandparent);  //llama a balance después de la inserción
 }
-void RB::balance(RBNode* node) {
+void RB::balance(RBNode* node, RBNode* pnode) {
     RotationType rType = getRotationType(node);
     if (rType == RotationType::case_1) {
         do_case_1(node);
     } else if (rType == RotationType::case_2) {
-        do_case_2(node);
+        do_case_2(pnode);
     } else if (rType == RotationType::case_3) {
-        do_case_3(node);
+        do_case_3(pnode);
     }
 }
 
@@ -126,7 +126,9 @@ void RB::do_case_2(RBNode* node) {
     bool isLeftChild = node->isLeft();
     if (leftChild && leftChild->getColor() == 'R' && leftChild->getLeft() && leftChild->getLeft()->getColor() == 'R') {
         node->setLeft(leftChild->getRight());
+        leftChild->getRight()->setParent(node);
         leftChild->setRight(node);
+        node->setParent(leftChild);
         if (node == root) {
             root = leftChild;
         } else {
@@ -136,11 +138,14 @@ void RB::do_case_2(RBNode* node) {
                 parent->setRight(leftChild);
             }
         }
+        leftChild->setParent(parent);
         node->setColor(NodeColor::RED);
         leftChild->setColor(NodeColor::BLACK);
     } else if (rightChild && rightChild->getColor() == 'R' && rightChild->getRight() && rightChild->getRight()->getColor() == 'R') {
         node->setRight(rightChild->getLeft());
+        rightChild->getLeft()->setParent(node);
         rightChild->setLeft(node);
+        node->setParent(rightChild);
         if (node == root) {
             root = rightChild;
         } else {
@@ -150,6 +155,7 @@ void RB::do_case_2(RBNode* node) {
                 parent->setRight(rightChild);
             }
         }
+        rightChild->setParent(parent);
         node->setColor(NodeColor::RED);
         rightChild->setColor(NodeColor::BLACK);
     }

@@ -62,10 +62,17 @@ int main(int nargs, char** vargs){
         data_folder + "keys_sorted_1048576.bin",
         data_folder + "keys_sorted_33554432.bin"
     };
-    
+    trees::RB rbtree;
     //cargar queries
     std::vector<int> queries = readQueriesFromFile(data_folder + "queries_1000.bin");
-
+        rbtree.insert(6);
+        rbtree.insert(7);
+        rbtree.insert(2);
+        rbtree.insert(10);
+        rbtree.insert(8);
+        rbtree.insert(26);
+        rbtree.insert(18);
+        rbtree.traverse();
     //procesar cada archivo en la lista
     for (const std::string& filename : files) {
         std::cout << "Procesando archivo: " << filename << std::endl;
@@ -76,10 +83,10 @@ int main(int nargs, char** vargs){
             std::cerr << "Error al leer los datos del archivo: " << filename << std::endl;
             continue;  //pasar al siguiente archivo si hubo un error
         }
-
+        /*
         trees::RB rbtree;
 
-        /*//medir el tiempo de inserción en el árbol Red-Black
+        //medir el tiempo de inserción en el árbol Red-Black
         auto start_insertion = std::chrono::high_resolution_clock::now();
         for(int i = 0; i < n_data; i++) {
             rbtree.insert(data[i]);
@@ -89,13 +96,7 @@ int main(int nargs, char** vargs){
         std::cout << "Tiempo de inserción para " << filename << ": " << duration_insertion << " microsegundos" << std::endl;
         */
         //medir el tiempo de búsqueda de las queries
-        rbtree.insert(6);
-        rbtree.insert(7);
-        rbtree.insert(2);
-        rbtree.insert(10);
-        rbtree.insert(8);
-        rbtree.insert(26);
-        rbtree.insert(18);
+ 
         /*
         int found_count = 0;
         int not_found_count = 0;

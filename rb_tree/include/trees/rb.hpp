@@ -24,7 +24,7 @@ class RB {
 private:
 	RBNode* root;
 	/*private methods, rotations*/
-	void balance(RBNode* node);
+	void balance(RBNode* node, RBNode* pnode);
 	void do_case_1(RBNode* node);
 	void do_case_2(RBNode* node);
 	void do_case_3(RBNode* node);

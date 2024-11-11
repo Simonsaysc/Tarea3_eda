@@ -49,9 +49,11 @@ void RB::insert(int val) {
 
     RBNode* current = root;
     RBNode* parent = nullptr;
+    RBNode* grandparent = nullptr;
 
     //iterativamente buscar la posición de inserción
     while (current != nullptr) {
+        grandparent = parent;
         parent = current;
         if (val < current->getData()) {
             current = current->getLeft();
@@ -68,7 +70,7 @@ void RB::insert(int val) {
         parent->setRight(newNode);
     }
 
-    balance(newNode);  //llama a balance después de la inserción
+    balance(parent);  //llama a balance después de la inserción
 }
 void RB::balance(RBNode* node) {
     RotationType rType = getRotationType(node);
@@ -95,6 +97,13 @@ RotationType RB::getRotationType(RBNode* node) {
                 rightChild->getRight() != nullptr && rightChild->getRight()->getColor() == 'R')) {
         rType = RotationType::case_2;
     }
+    else if((leftChild != nullptr && leftChild->getColor() == 'R' &&
+               leftChild->getRight() != nullptr && leftChild->getRight()->getColor() == 'R') ||
+               (rightChild != nullptr && rightChild->getColor() == 'R' &&
+                rightChild->getLeft() != nullptr && rightChild->getLeft()->getColor() == 'R')){
+        rType = RotationType::case_3;
+    }
+
     return rType;
 }
 
@@ -197,6 +206,8 @@ void RB::rotateRight(RBNode* node) {
 
 void RB::traverse(RBNode* node, int label) {
     if (node != nullptr) {
+        std::cout<<node->getData()<<std::endl;
+        std::cout<<"es izquierdo: "<< node->isLeft()<<std::endl;
         traverse(node->getLeft(), label + 1);
         traverse(node->getRight(), label + 1);
     }

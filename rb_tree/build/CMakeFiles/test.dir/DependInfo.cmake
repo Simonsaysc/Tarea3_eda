@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/edauandes/t3EDA/Tarea3_eda/rb_tree/src/rb.cpp" "CMakeFiles/test.dir/src/rb.cpp.o" "gcc" "CMakeFiles/test.dir/src/rb.cpp.o.d"
-  "/home/edauandes/t3EDA/Tarea3_eda/rb_tree/src/rbNode.cpp" "CMakeFiles/test.dir/src/rbNode.cpp.o" "gcc" "CMakeFiles/test.dir/src/rbNode.cpp.o.d"
-  "/home/edauandes/t3EDA/Tarea3_eda/rb_tree/test.cpp" "CMakeFiles/test.dir/test.cpp.o" "gcc" "CMakeFiles/test.dir/test.cpp.o.d"
+  "/home/edauandes/Tarea3_eda/rb_tree/src/rb.cpp" "CMakeFiles/test.dir/src/rb.cpp.o" "gcc" "CMakeFiles/test.dir/src/rb.cpp.o.d"
+  "/home/edauandes/Tarea3_eda/rb_tree/src/rbNode.cpp" "CMakeFiles/test.dir/src/rbNode.cpp.o" "gcc" "CMakeFiles/test.dir/src/rbNode.cpp.o.d"
+  "/home/edauandes/Tarea3_eda/rb_tree/test.cpp" "CMakeFiles/test.dir/test.cpp.o" "gcc" "CMakeFiles/test.dir/test.cpp.o.d"
   )
 
 # Targets to which this target links.

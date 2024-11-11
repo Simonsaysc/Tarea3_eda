@@ -1,8 +1,7 @@
 CMakeFiles/test.dir/src/rb.cpp.o: \
- /home/edauandes/t3EDA/Tarea3_eda/rb_tree/src/rb.cpp \
- /usr/include/stdc-predef.h \
- /home/edauandes/t3EDA/Tarea3_eda/rb_tree/include/trees/rb.hpp \
- /home/edauandes/t3EDA/Tarea3_eda/rb_tree/include/trees/rbNode.hpp \
+ /home/edauandes/Tarea3_eda/rb_tree/src/rb.cpp /usr/include/stdc-predef.h \
+ /home/edauandes/Tarea3_eda/rb_tree/include/trees/rb.hpp \
+ /home/edauandes/Tarea3_eda/rb_tree/include/trees/rbNode.hpp \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

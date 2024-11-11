@@ -1,4 +1,4 @@
-# Install script for directory: /home/edauandes/t3EDA/Tarea3_eda/rb_tree
+# Install script for directory: /home/edauandes/Tarea3_eda/rb_tree
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/edauandes/t3EDA/Tarea3_eda/rb_tree/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/edauandes/Tarea3_eda/rb_tree/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

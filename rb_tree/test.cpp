@@ -53,14 +53,14 @@ int main(int nargs, char** vargs){
 
     //lista de archivos
     std::vector<std::string> files = {
-        //data_folder + "keys_1024.bin",
+        data_folder + "keys_1024.bin",
         //data_folder + "keys_32768.bin",
         //data_folder + "keys_1048576.bin",
         //data_folder + "keys_33554432.bin",
         //data_folder + "keys_sorted_1024.bin",
         //data_folder + "keys_sorted_32768.bin",
-        data_folder + "keys_sorted_1048576.bin",
-        data_folder + "keys_sorted_33554432.bin"
+        //data_folder + "keys_sorted_1048576.bin",
+        //data_folder + "keys_sorted_33554432.bin"
     };
     trees::RB rbtree;
     //cargar queries
@@ -93,20 +93,22 @@ int main(int nargs, char** vargs){
         int found_count = 0;
         int not_found_count = 0;
         auto start_search = std::chrono::high_resolution_clock::now();
-        for (int query : queries) {
+        int query;
+        std::cout<<"Elije numero a buscar "<<std::endl;
+        std::cin >> query;
             if (rbtree.find(query) != nullptr) {  
-                found_count++;
+                std::cout<<"found"<<std::endl;
             } else {
-                not_found_count++;
+                std::cout<<"not found"<<std::endl;
             }
-        }
+        
         auto end_search = std::chrono::high_resolution_clock::now();
         auto duration_search = std::chrono::duration_cast<std::chrono::microseconds>(end_search - start_search).count();
         
         //resultados de búsqueda
         std::cout << "Tiempo de búsqueda para " << filename << ": " << duration_search << " microsegundos" << std::endl;
         std::cout << "Resultados de búsqueda - Encontrados: " << found_count << ", No encontrados: " << not_found_count << std::endl;
-        
+    
         delete[] data;  //liberar memoria
     }
 
